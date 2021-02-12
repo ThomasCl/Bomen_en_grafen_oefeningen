@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Recursie {
@@ -128,12 +129,25 @@ public class Recursie {
 
     // oefening 9;
     public static double findMaximum(List<Double> lijst) {
-        
+        if((lijst == null) || (lijst.isEmpty())){
+            throw new IllegalArgumentException();
+        }
+        if(lijst.size() == 1){
+            return(lijst.get(0));
+        }
+        double k = lijst.remove(0);
+        double l = findMaximum(lijst);
+        if(l > k){
+            return l;
+        }
+        else{
+            return k;
+        }
     }
 
     // oefening 10;
     public static ArrayList<String> findSubstrings(String string) {
-        throw new UnsupportedOperationException("Not yet implemented");
+
     }
 
 }
