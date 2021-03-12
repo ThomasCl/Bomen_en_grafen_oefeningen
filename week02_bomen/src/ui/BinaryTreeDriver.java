@@ -38,7 +38,7 @@ public class BinaryTreeDriver {
 
 		// boom heeft root C en heeft links A en rechts G
 		BinaryTree<String> boom = new BinaryTree<>("F",nodeB, nodeG);
-		System.out.print(boom.getDataLeaves());
+		System.out.print(boom.getDataLeaves() );
 	}
 
 }
